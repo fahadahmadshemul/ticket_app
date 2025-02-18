@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:helloworld/base/res/media.dart';
 import 'package:helloworld/base/res/styles/app_style.dart';
+import 'package:helloworld/base/utils/all_json.dart';
 import 'package:helloworld/base/widgets/app_double_text.dart';
 import 'package:helloworld/base/widgets/ticket_view.dart';
 
@@ -60,7 +61,13 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              TicketView(),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                    children: ticketList.map((singleTicket) {
+                  return TicketView(ticket: singleTicket);
+                }).toList()),
+              )
             ],
           ),
         ),
