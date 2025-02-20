@@ -3,14 +3,14 @@ import 'package:helloworld/base/res/styles/app_style.dart';
 import 'package:helloworld/base/utils/all_json.dart';
 import 'package:helloworld/base/widgets/ticket_view.dart';
 
-class AllTickets extends StatelessWidget {
-  const AllTickets({Key? key}) : super(key: key);
+class AllHotels extends StatelessWidget {
+  const AllHotels({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("All Tickets"),
+          title: const Text("All Hotels"),
         ),
         backgroundColor: AppStyle.bgColor,
         body: ListView(

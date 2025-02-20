@@ -8,19 +8,20 @@ import 'package:helloworld/base/widgets/text_style_fourth.dart';
 import 'package:helloworld/base/widgets/text_style_third.dart';
 
 class TicketView extends StatelessWidget {
-  // final Map<String dynamic> ticket;
   final Map<String, dynamic> ticket;
-  const TicketView({Key? key, required this.ticket}) : super(key: key);
+  final bool wholeScreen;
+  const TicketView({Key? key, required this.ticket, this.wholeScreen = false})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return SizedBox(
       width: size.width * 0.80,
-      height: 300,
       child: Container(
-        margin: EdgeInsets.all(10),
+        margin: EdgeInsets.only(right: wholeScreen == true ? 0 : 16),
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
             // Blue part of the ticket
             Container(

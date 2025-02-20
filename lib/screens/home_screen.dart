@@ -4,6 +4,7 @@ import 'package:helloworld/base/res/styles/app_style.dart';
 import 'package:helloworld/base/utils/all_json.dart';
 import 'package:helloworld/base/widgets/app_double_text.dart';
 import 'package:helloworld/base/widgets/ticket_view.dart';
+import 'package:helloworld/screens/hotel.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -17,6 +18,7 @@ class HomeScreen extends StatelessWidget {
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -57,7 +59,9 @@ class HomeScreen extends StatelessWidget {
               ),
               const SizedBox(height: 40),
               const AppDoubleText(
-                  bigText: 'Upcomming Flights', smallText: 'View All'),
+                  bigText: 'Upcomming Flights',
+                  smallText: 'View All',
+                  routeName: '/all_tickets'),
               const SizedBox(
                 height: 20,
               ),
@@ -67,6 +71,28 @@ class HomeScreen extends StatelessWidget {
                     children: ticketList.map((singleTicket) {
                   return TicketView(ticket: singleTicket);
                 }).toList()),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              const AppDoubleText(
+                  bigText: 'Hotels',
+                  smallText: 'View All',
+                  routeName: '/all_hotels'),
+              const SizedBox(height: 20),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                    children: hotelList
+                        .map((singleTicket) => Container(
+                              child: Hotel(
+                                hotel: singleTicket,
+                              ),
+                            ))
+                        .toList()),
+              ),
+              const SizedBox(
+                height: 30,
               )
             ],
           ),
