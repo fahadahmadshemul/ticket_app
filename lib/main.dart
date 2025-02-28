@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:helloworld/screens/all_hotels.dart';
-import 'package:helloworld/screens/all_tickets.dart';
+import 'package:helloworld/screens/home/all_hotels.dart';
+import 'package:helloworld/screens/home/all_tickets.dart';
 
 import 'base/bottom_nav_bar.dart';
 

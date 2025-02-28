@@ -1,6 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:helloworld/screens/home_screen.dart';
+import 'package:helloworld/screens/home/home_screen.dart';
+import 'package:helloworld/screens/search/search_screen.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
@@ -12,12 +12,12 @@ class BottomNavBar extends StatefulWidget {
 class _BottomNavBarState extends State<BottomNavBar> {
   final AppScreen = [
     const HomeScreen(),
-    const Center(child: Text("Search")),
+    const SearchScreen(),
     const Center(child: Text("Tickets")),
     const Center(child: Text("Profile")),
   ];
 
-  //change out index for BottomNavBar
+  //changechange out index for BottomNavBar
   int __selectedIndex = 0;
 
   void __onItemTapped(int index) {

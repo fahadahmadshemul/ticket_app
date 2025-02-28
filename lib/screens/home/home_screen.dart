@@ -4,7 +4,7 @@ import 'package:helloworld/base/res/styles/app_style.dart';
 import 'package:helloworld/base/utils/all_json.dart';
 import 'package:helloworld/base/widgets/app_double_text.dart';
 import 'package:helloworld/base/widgets/ticket_view.dart';
-import 'package:helloworld/screens/hotel.dart';
+import 'package:helloworld/screens/home/wedgets/hotel.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
