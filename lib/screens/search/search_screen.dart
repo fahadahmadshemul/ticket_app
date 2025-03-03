@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:helloworld/base/res/styles/app_style.dart';
-import 'package:helloworld/base/widgets/text_style_third.dart';
+import 'package:helloworld/base/widgets/app_double_text.dart';
 import 'package:helloworld/screens/search/wedgets/app_text_icon.dart';
 import 'package:helloworld/screens/search/wedgets/app_tickets_tab.dart';
+import 'package:helloworld/screens/search/wedgets/find_tickets.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({Key? key}) : super(key: key);
@@ -12,25 +13,33 @@ class SearchScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppStyle.bgColor,
       body: ListView(
-        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
         children: [
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Text(
             "What are\nyou looking for ?",
             style: AppStyle.headlineStyleOne.copyWith(fontSize: 35),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           const AppTicketTabs(),
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
-          AppTextIcon(icon: Icons.flight_takeoff_rounded, text: "Departure"),
-          SizedBox(height: 25),
-          AppTextIcon(icon: Icons.flight_land_rounded, text: "Arrival"),
+          const AppTextIcon(
+              icon: Icons.flight_takeoff_rounded, text: "Departure"),
+          const SizedBox(height: 20),
+          const AppTextIcon(icon: Icons.flight_land_rounded, text: "Arrival"),
+          const SizedBox(height: 25),
+          const FindTickets(),
+          const SizedBox(height: 40),
+          const AppDoubleText(
+              bigText: "Upcomming Fights",
+              smallText: "View All",
+              routeName: '/all_tickets')
         ],
       ),
     );
