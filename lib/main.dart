@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:helloworld/screens/home/all_hotels.dart';
 import 'package:helloworld/screens/home/all_tickets.dart';
+import 'package:helloworld/screens/search/search_screen.dart';
 
 import 'base/bottom_nav_bar.dart';
 
@@ -19,6 +20,9 @@ class MyApp extends StatelessWidget {
         '/': (context) => const BottomNavBar(),
         '/all_tickets': (context) => const AllTickets(),
         '/all_hotels': (context) => const AllHotels(),
+        '/search': (context) => const SearchScreen(),
+        // '/search': (context) => const SearchScreen(),
+        // '/profile':(context) =>
       },
     );
   }

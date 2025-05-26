@@ -4,6 +4,7 @@ import 'package:helloworld/base/widgets/app_double_text.dart';
 import 'package:helloworld/screens/search/wedgets/app_text_icon.dart';
 import 'package:helloworld/screens/search/wedgets/app_tickets_tab.dart';
 import 'package:helloworld/screens/search/wedgets/find_tickets.dart';
+import 'package:helloworld/screens/search/wedgets/ticket_promotions.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({Key? key}) : super(key: key);
@@ -25,7 +26,7 @@ class SearchScreen extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          const AppTicketTabs(),
+          const AppTicketTabs(firstTab: "Airline Tickets", secondTab: "Hotels"),
           const SizedBox(
             height: 25,
           ),
@@ -39,7 +40,9 @@ class SearchScreen extends StatelessWidget {
           const AppDoubleText(
               bigText: "Upcomming Fights",
               smallText: "View All",
-              routeName: '/all_tickets')
+              routeName: '/all_tickets'),
+          const SizedBox(height: 15),
+          TicketPromotion(),
         ],
       ),
     );

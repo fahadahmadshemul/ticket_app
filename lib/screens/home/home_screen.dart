@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:helloworld/base/res/media.dart';
 import 'package:helloworld/base/res/styles/app_style.dart';
@@ -5,6 +7,7 @@ import 'package:helloworld/base/utils/all_json.dart';
 import 'package:helloworld/base/widgets/app_double_text.dart';
 import 'package:helloworld/base/widgets/ticket_view.dart';
 import 'package:helloworld/screens/home/wedgets/hotel.dart';
+import 'package:helloworld/screens/search/search_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -38,8 +41,8 @@ class HomeScreen extends StatelessWidget {
                       width: 50,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        image:
-                            DecorationImage(image: AssetImage(AppMedia.logo)),
+                        image: const DecorationImage(
+                            image: AssetImage(AppMedia.logo)),
                       ))
                 ],
               ),
@@ -49,8 +52,8 @@ class HomeScreen extends StatelessWidget {
                     const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Color(0xFFF4F6FD)),
-                child: Row(
+                    color: const Color(0xFFF4F6FD)),
+                child: const Row(
                   children: [
                     Icon(Icons.search, color: Color(0xffd8d7c8)),
                     Text("Search"),
