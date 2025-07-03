@@ -21,8 +21,6 @@ class MyApp extends StatelessWidget {
         '/all_tickets': (context) => const AllTickets(),
         '/all_hotels': (context) => const AllHotels(),
         '/search': (context) => const SearchScreen(),
-        // '/search': (context) => const SearchScreen(),
-        // '/profile':(context) =>
       },
     );
   }

@@ -19,7 +19,8 @@ class TicketScreen extends StatelessWidget {
           SizedBox(height: 20),
           AppTicketTabs(firstTab: "Upcomming", secondTab: "Previous"),
           SizedBox(height: 20),
-          TicketView(ticket: ticketList[0])
+          TicketView(ticket: ticketList[0]),
+          // TicketView(ticket: ticketList[0]),
         ],
       ),
     );

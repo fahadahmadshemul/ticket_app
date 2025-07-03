@@ -43,6 +43,7 @@ class SearchScreen extends StatelessWidget {
               routeName: '/all_tickets'),
           const SizedBox(height: 15),
           TicketPromotion(),
+          // TicketPromotion(),
         ],
       ),
     );

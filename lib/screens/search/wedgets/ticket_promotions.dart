@@ -99,6 +99,7 @@ class TicketPromotion extends StatelessWidget {
                     TextSpan(text: '😍', style: TextStyle(fontSize: 30)),
                     TextSpan(text: '🥰', style: TextStyle(fontSize: 40)),
                     TextSpan(text: '😘', style: TextStyle(fontSize: 30)),
+                    // TextSpan(text: '😘', style: TextStyle(fontSize: 30)),
                   ]))
                 ],
               ),
